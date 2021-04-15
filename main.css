@@ -1,0 +1,128 @@
+body {
+  padding: 20px;
+  margin: 0;
+}
+
+.table {
+  display: flex;
+
+  position: relative;
+  overflow-x: auto;
+  width: 800px;
+}
+
+.header-container {
+  position: sticky;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  /* total length including margin is 200px */
+}
+
+.header {
+  display: flex;
+  /* box-shadow right width is 14px */
+  width: 186px;
+  height: 50px;
+}
+
+.header-content {
+  padding: 5px;
+  width: 186px;
+  background: #fff;
+}
+
+.shadow-container {
+  width: 15px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.shadow {
+  height: 100%;
+  width: 13px;
+  background: #fff;
+}
+
+.shadow.box-shadow {
+  transform: scaleY(1.2) translateX(-16px);
+  transform-origin: center;
+  box-shadow: 12px 0px 8px 0px #fff;
+}
+
+.shadow.drop-shadow {
+  transform: scaleY(1.2) translateX(-16px);
+  transform-origin: center;
+  filter: drop-shadow(12px 0 4px #fff);
+}
+
+.shadow.blur {
+  transform: scaleY(1.2) translateX(-4px);
+  transform-origin: center;
+  filter: blur(4px);
+}
+
+.shadow.linear-gradient {
+  width: 15px;
+  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.header:nth-child(even) .header-content,
+.header:nth-child(even) .shadow,
+.content:nth-child(even) {
+  background: #ccc;
+}
+
+.header:nth-child(even) .shadow.box-shadow {
+  box-shadow: 12px 0px 8px 0px #ccc;
+}
+
+.header:nth-child(even) .shadow.drop-shadow {
+  filter: drop-shadow(12px 0 4px #ccc);
+}
+
+.header:nth-child(even) .shadow.linear-gradient {
+  background: linear-gradient(90deg, #ccc 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  min-width: 3000px;
+  height: 50px;
+  background: #fff;
+  padding: 0 20px;
+  margin-left: -20px;
+}
+
+label {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 0 2px;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+
+form {
+  margin-bottom: 100px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.btn-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+button {
+  margin: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
